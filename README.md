@@ -10,6 +10,16 @@ HF-LLM.rs is a CLI tool for accessing Large Language Models (LLMs) like Llama 3.
 
 Also, you can find the list of models supported by this CLI [here](https://huggingface.co/models?inference=warm&pipeline_tag=text-generation&sort=trending)—the list keeps getting updated as new models are released on the Hugging Face Hub. You might require a [Pro subscription](https://huggingface.co/subscribe/pro) to access some models.
 
+## The Open Source LLM models: FREE vs PAID
+
+### FREE
+- [google/gemma-2-9b-it](https://huggingface.co/google/gemma-2-9b-it): run `cargo run --release -- -m "google/gemma-2-9b-it" -c` for the interactive chat session with the LLM
+- [google/gemma-2-27b-it](https://huggingface.co/google/gemma-2-27b-it): run `cargo run --release -- -m "google/gemma-2-27b-it" -c` for the interactive chat session with the LLM
+
+### PAID (Pro only LLM models, so you'd require a Pro subscription for it: [HuggingFace ProAccount](https://huggingface.co/pricing#pro)
+- [meta-llama/Meta-Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct): run `cargo run --release -- -m "meta-llama/Meta-Llama-3.1-8B-Instruct" -c` for the interactive chat session with the LLM
+- [meta-llama/Meta-Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct): run `cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -c` for the interactive chat session with the LLM
+
 ## Features
 
 - **Model Selection**: Choose from a variety of models available & deployed on Hugging Face infrastructure.
