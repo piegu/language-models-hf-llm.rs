@@ -80,15 +80,33 @@ Also, you can find the list of models supported by this CLI [here](https://huggi
 
 To use HF-LLM.rs, follow these steps:
 
-```
-cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -p "How to make a dangerously spicy ramen?"
-```
+1. **Open a Terminal**
+   - Command Prompt (Windows 10 & 11) from the menu that appears after pressing Win+X or right-clicking the Start Menu.
 
-You can also use the chat mode to start an interactive chat session with the LLM.
+2. **Login To Hugging Face with a valid token**
+   Run the command:
+   ```
+   huggingface-cli login
+   ```
+   - Go to your HuggingFace profile and create a token in [Access Tokens](https://huggingface.co/settings/tokens)
+   - Copy the token and paste it into the Terminal. Then, click on `Enter`.
 
-```
-cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -c
-```
+3. **Navigate to the project directory**
+   ```
+   cd hf-llm.rs
+   ```
+   
+4. **Launch the LLM model**
+   Run the command:
+   ```
+   cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -p "How to make a dangerously spicy ramen?"
+   ```
+   
+   You can also use the chat mode to start an interactive chat session with the LLM.
+   
+   ```
+   cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -c
+   ```
 
 Note: Make sure to run `huggingface-cli login` to log into your Hugging Face account to access some of the models.
 
