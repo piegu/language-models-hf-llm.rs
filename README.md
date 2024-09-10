@@ -109,17 +109,25 @@ To use HF-LLM.rs, follow these steps:
 4. **Launch the LLM model**
    Run the command:
    ```
-   cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -p "How to make a dangerously spicy ramen?"
+   cargo run --release -- -m "google/gemma-2-9b-it" -p "How to make a dangerously spicy ramen?"
    ```
    
-   You can also use the chat mode to start an interactive chat session with the LLM.
+   You can also use the chat mode to start an interactive chat session with the LLM by running this command:
    
+   ```
+   cargo run --release -- -m "google/gemma-2-9b-it" -c
+   ```
+
+Notes: 
+1. Make sure to run `huggingface-cli login` to log into your Hugging Face account to access some of the models.
+2. The Llama 3.1 models need the paid HuggingFace Pro subscription to run through this script. If you have it, launch the following commands:
+   ```
+   cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -p "How to make a dangerously spicy ramen?"
+   ```
+   or
    ```
    cargo run --release -- -m "meta-llama/Meta-Llama-3.1-70B-Instruct" -c
    ```
-
-Note: Make sure to run `huggingface-cli login` to log into your Hugging Face account to access some of the models.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
